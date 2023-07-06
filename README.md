@@ -48,3 +48,13 @@ eslint-plugin-react: ^7.32.2
 eslint-plugin-react-hooks: ^4.6.0
 eslint-plugin-react-refresh: ^0.3.4
 vite: ^4.3.9
+
+Contributing
+Contributions are welcome! If you would like to contribute to this project, please follow these steps:
+
+Fork the repository.
+Create a new branch for your feature or bug fix.
+Make your modifications.
+Commit your changes.
+Push your branch to your forked repository.
+Open a pull request.
