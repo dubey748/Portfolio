@@ -1,0 +1,13 @@
+/* App.css */
+body {
+  /* Define default font family, size, and color */
+  font-family: 'Arial', sans-serif;
+  font-size: 16px;
+  color: #333;
+  background-color: #E3E6E3;
+  margin: 0;
+  padding: 0;
+}
+
+
+/* Optionally, you can add other global styles here */

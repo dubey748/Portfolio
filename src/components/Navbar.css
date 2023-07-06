@@ -1,0 +1,39 @@
+/* Navbar.css */
+
+/* Navbar container styles */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: black;
+    color: #fff;
+    padding: 1rem 2rem;
+  }
+  
+  /* Logo styles */
+  .logo {
+    font-size: 2rem;
+    font-weight: bold;
+  }
+  
+  /* Navigation links styles */
+  .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+  }
+  
+  .nav-links li {
+    cursor: pointer;
+    transition: color 0.3s ease;
+  }
+  
+  .nav-links li:hover {
+    color: #61dafb;
+  }
+  
+  .nav-links li.active {
+    color: #61dafb;
+    border-bottom: 2px solid #61dafb;
+  }
+  

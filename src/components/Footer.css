@@ -1,0 +1,104 @@
+/* src/components/Footer.css */
+
+.footer {
+  background-color: #222;
+  color: #fff;
+  padding: 2rem;
+}
+
+.footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center; /* Center the content vertically */
+}
+
+.footer-info {
+  flex: 1 0 300px;
+}
+
+.footer-info h3 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.footer-links {
+  flex: 1; /* Allow the links to take up the remaining space */
+  display: flex;
+  justify-content: center; /* Center the links horizontally */
+}
+
+.footer-links button {
+  color: #fff;
+  text-decoration: none;
+  margin-right: 1.5rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem; /* Set font size */
+  padding: 0.5rem 1rem; /* Set padding */
+  border-radius: 4px; /* Add rounded corners */
+  transition: background-color 0.3s ease; /* Add a smooth background color transition */
+}
+
+.footer-links button:hover {
+  background-color: #333; /* Change the background color on hover */
+}
+
+.footer-contact {
+  flex: 1 0 300px;
+}
+
+@media screen and (max-width: 1200px) {
+  .footer-content {
+    flex-wrap: wrap;
+  }
+
+  .footer-info,
+  .footer-links,
+  .footer-contact {
+    flex: 1 0 100%;
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+
+  .footer-links button {
+    margin-right: 0;
+    margin-bottom: 0.5rem;
+    display: block;
+  }
+}
+.footer-up-icon {
+  flex: 0 0 40px; /* Set a fixed width for the up icon container */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #444;
+  color: #fff;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.footer-up-icon:hover {
+  background-color: #666;
+}
+
+/* Style the up icon itself (from Font Awesome) */
+.footer-up-icon svg {
+  font-size: 1.5rem;
+}
+
+@media screen and (max-width: 768px) {
+  .footer {
+    text-align: center;
+  }
+}
+@media screen and (max-width: 1200px) {
+  /* ... (previous responsive rules) ... */
+
+  .footer-up-icon {
+    flex: 1 0 40px;
+  }
+}
