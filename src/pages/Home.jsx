@@ -3,19 +3,19 @@ import {
   Navbar,
   Footer,
   ProjectCard,
-  SkillBar,
   ContactForm,
-  Testimonial
+  Testimonial,
+  Resume
 } from '../components';
 import './Home.css'; 
 
+
 const Home = () => {
   const sections = {
-    Projects: useRef(null),
-    Skills: useRef(null),
-    Resume: useRef(null),
-    Testimonials: useRef(null),
-    Contact: useRef(null),
+    Projects: useRef(),
+    Resume: useRef(),
+    Testimonials: useRef(),
+    Contact: useRef(),
   };
   const projects = [
     {
@@ -61,35 +61,36 @@ const Home = () => {
       <Navbar sections={sections} />
 
       {/* Projects Section */}
-      <section className="section projects" id="projects">
+      <section className="section projects" id="projects" ref={sections.Projects}>
         <h2>Projects</h2>
         <div className="project-cards-container">
           {/* Render ProjectCard components with project data */}
           {projects.map((project, index) => (
             <ProjectCard key={index} project={project} />
-            // Using the index as the key
           ))}
         </div>
       </section>
 
-      {/* Skills Section */}
-      <section className="section skills" ref={sections.skills} id="skills">
-        
-        <SkillBar />
-      </section>
 
       {/* Resume Section */}
 
       {/* Testimonials Section */}
-      <section className="section testimonials" ref={sections.testimonials} id="testimonials">
+      <section className="section testimonials" ref={sections.Testimonials} id="testimonials">
         <Testimonial/>
-        {/* Your Testimonial components and testimonial details go here */}
+        
       </section>
 
+      <section className="section resume" ref={sections.Resume} id="resume">
+        <Resume/>
+        
+      </section>
+      
+      
+
       {/* Contact Section */}
-      <section className="section contact" ref={sections.contact} id="contact">
+      <section className="section contact" ref={sections.Contact} id="contact">
        <ContactForm/>
-        {/* Your ContactForm component and contact details go here */}
+      
       </section>
 
       <Footer />

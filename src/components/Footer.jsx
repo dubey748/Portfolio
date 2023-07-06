@@ -27,7 +27,7 @@ const Footer = () => {
         </div>
         <div className="footer-links">
           <button onClick={() => scrollToSection('projects')}>Projects</button>
-          <button onClick={() => scrollToSection('skills')}>Skills</button>
+          <button onClick={() => scrollToSection('resume')}>Resume</button>
           <button onClick={() => scrollToSection('testimonials')}>Testimonials</button>
           <button onClick={() => scrollToSection('contact')}>Contact</button>
         </div>

@@ -1,9 +1,8 @@
 import React from 'react';
-import './ProjectCard.css'; // Import the custom ProjectCard styles
+import './ProjectCard.css'; 
 
 const ProjectCard = ({ project }) => {
   const { title, description, thumbnailUrl, projectLink } = project;
-
   return (
     <div className="project-card">
       <img src={thumbnailUrl} alt="Project Thumbnail" className="project-thumbnail" />

@@ -1,0 +1,108 @@
+.resume {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+
+header {
+  text-align: center;
+}
+
+h1 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+p {
+  font-size: 18px;
+  color: white;
+  line-height: 1.5;
+}
+
+button {
+  display: inline-block;
+  margin: 5px;
+  padding: 8px 16px;
+  font-size: 16px;
+  border: none;
+  background-color: #f2f2f2;
+  color: #555;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #ddd;
+}
+
+button:focus {
+  outline: none;
+  background-color: #ccc;
+}
+
+section {
+  margin-top: 20px;
+}
+
+h2 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+ul {
+  list-style-type: disc;
+  padding-left: 20px;
+  margin-bottom: 15px;
+}
+
+ul li {
+  margin-bottom: 5px;
+}
+
+.resume-section {
+  background-color: black;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.resume-section h2 {
+  font-size: 18px;
+  color: white;
+  margin-bottom: 10px;
+}
+
+.resume-section p {
+  font-size: 16px;
+  color: white;
+  line-height: 1.5;
+}
+
+.resume-section ul {
+  color: white;
+}
+
+.resume-section .highlight {
+  color: #ff6600;
+  font-weight: bold;
+}
+
+.resume-section::before {
+  content: '';
+  position: absolute;
+  width: 4px;
+  height: 100%;
+  background-color: #ff6600;
+  left: -15px;
+  top: 0;
+}
+
+.resume-section:last-child::before {
+  display: none;
+}
+
+.resume-section:not(:last-child) {
+  margin-bottom: 20px;
+}

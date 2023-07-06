@@ -1,6 +1,4 @@
-/* Home.css */
 
-/* Styles for the entire Home component container */
 .home-container {
   max-width: 1200px;
   margin: 0 auto;
@@ -11,22 +9,22 @@
 .project-cards-container {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center; /* Adjust this as per your preference */
-  gap: 1rem; /* Add some spacing between the cards */
+  justify-content: center; 
+  gap: 1rem; 
 }
-  /* Styles for each section */
+ 
   .section {
     margin-bottom: 3rem;
   }
   
-  /* Heading styles for sections */
+  
   .section h2 {
     font-size: 2.5rem;
     font-weight: bold;
     margin-bottom: 1rem;
   }
   
-  /* ProjectCard styles */
+ 
   .project-card {
     border: 1px solid #ccc;
     border-radius: 8px;
@@ -49,28 +47,13 @@
     height: 100%;
   }
   
-  /* Resume styles */
-  .resume-content {
-    /* Add your styles for the resume content here */
-  }
-  
-  /* Testimonial styles */
   .testimonial-card {
     border: 1px solid #ccc;
     border-radius: 8px;
     padding: 1.5rem;
     box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
   }
-  
-  /* ContactForm styles */
-  .contact-form {
-    /* Add your styles for the contact form here */
-  }
-  
-  /* Footer styles */
-  .footer {
-    /* Add your styles for the footer here */
-  }
+ 
   @media screen and (max-width: 1200px) {
     .project-card {
       flex: 0 0 calc(33.3333% - 1rem); /* Adjust card width to fit three cards in one row on smaller screens */
