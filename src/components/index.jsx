@@ -4,6 +4,7 @@ import ProjectCard from './ProjectCard';
 import ContactForm from './ContactForm';
 import Testimonial from './Testimonial';
 import Resume from './Resume';
+import Banner from './Banner';
 
 export {
   Navbar,
@@ -12,5 +13,6 @@ export {
 
   ContactForm,
   Testimonial,
-  Resume
+  Resume,
+  Banner
 };

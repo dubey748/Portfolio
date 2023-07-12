@@ -1,0 +1,93 @@
+.portfolio-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-left: 70px;
+}
+
+.details-container {
+  flex: 1;
+  padding-right: 20px;
+}
+
+.designation {
+  margin-bottom: 10px;
+  padding-bottom: 20px;
+}
+.designation h2{
+  color: white;
+  font-weight: bold
+}
+
+.banner-container {
+  flex: 1;
+  text-align: right;
+}
+
+.banner-container img {
+  max-width: 100%;
+  height: auto;
+}
+
+@keyframes pulsate {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.designation h2 {
+  color: white;
+  font-weight: bold;
+  animation: pulsate 2s infinite;
+}
+
+/* @keyframes scale-in {
+  0% {
+    transform: scale(0);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.designation h2 {
+  color: white;
+  font-weight: bold;
+  animation: scale-in 5s infinite;
+} */
+
+.description.animated span {
+  opacity: 0;
+  color: white;
+  padding-top: 20px;
+ 
+  animation-name: fadeIn;
+  animation-duration: 0.7s;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-in-out;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+
+
+
+
+
+
+

@@ -7,7 +7,8 @@ import {
   ProjectCard,
   ContactForm,
   Testimonial,
-  Resume
+  Resume,
+  Banner
 } from '../components';
 import './Home.css'; 
 
@@ -76,6 +77,7 @@ const Home = () => {
   ];
   return (
     <div className="home-container">
+    <Banner/>
       <Navbar sections={sections} />
 
       {/* Projects Section */}
