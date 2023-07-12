@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import './Navbar.css'; // Import the custom Navbar styles
 import { FaCode, FaFileAlt, FaComments, FaEnvelope } from 'react-icons/fa';
 
-
 const Navbar = ({ sections }) => {
   const [activeSection, setActiveSection] = useState('');
 
@@ -11,12 +10,21 @@ const Navbar = ({ sections }) => {
     scrollToSection(section);
   };
 
+  const handleMouseEnter = (section) => {
+    setActiveSection(section);
+  };
+
+  const handleMouseLeave = () => {
+    setActiveSection('');
+  };
+
   const scrollToSection = (section) => {
     const targetSection = sections[section];
     if (targetSection) {
       targetSection.current.scrollIntoView({ behavior: 'smooth' });
     }
   };
+
   const handleLogoClick = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' }); // Scroll to the top of the page
     // Alternatively, I can use the following line to refresh the page:
@@ -25,21 +33,27 @@ const Navbar = ({ sections }) => {
 
   return (
     <nav className="navbar">
-      <div className="logo" onClick={handleLogoClick}><img
+      <div className="logo" onClick={handleLogoClick}>
+        <img
           src="https://avatars.githubusercontent.com/u/65311526?v=4"
           alt="ABhishek Dubey"
-        /></div>
+        />
+      </div>
       <ul className="nav-links">
         {Object.keys(sections).map((sectionKey) => (
-         
           <li
             key={sectionKey}
-            
             className={activeSection === sectionKey ? 'active' : ''}
             onClick={() => handleItemClick(sectionKey)}
+            onMouseEnter={() => handleMouseEnter(sectionKey)}
+            onMouseLeave={handleMouseLeave}
           >
-         
-         {sections[sectionKey].icon}
+            <span className="icon-wrapper">
+              {sections[sectionKey].icon}
+              {activeSection === sectionKey && (
+                <span className="section-name">{sectionKey}</span>
+              )}
+            </span>
           </li>
         ))}
       </ul>
