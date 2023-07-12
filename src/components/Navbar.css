@@ -1,8 +1,6 @@
-/* Navbar container styles */
 .navbar {
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: flex-start;
   background-color: black;
   color: #fff;
@@ -11,27 +9,42 @@
   top: 0;
   left: 0;
   height: 100vh;
-  width: 10px; /* Adjust the width as per your requirement */
+  border: white;
+  width: 70px; /* Adjust the width as per your requirement */
 }
 
-/* Logo styles */
 .logo {
-  font-size: 2rem;
-  font-weight: bold;
-  margin-bottom: 2rem; /* Add margin-bottom for spacing */
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+  color: white;
+  cursor: pointer;
 }
 
-/* Navigation links styles */
+.logo img {
+  width: 40px; /* Adjust the width and height to your desired size */
+  height: 40px;
+  border-radius: 50%; /* Make the image circular */
+  object-fit: cover;
+  margin-right: 10px;
+}
+
 .nav-links {
   list-style: none;
   padding: 0;
-  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* Align navigation links to the left */
+  justify-content: center;
+  flex-grow: 1; /* Allow the navigation links to expand and fill the remaining space */
+  margin-top: auto; /* Push the navigation links to the bottom */
 }
 
 .nav-links li {
   cursor: pointer;
   transition: color 0.3s ease;
-  margin-bottom: 1rem; /* Adjust the spacing between list items */
+  padding: 20px;
+  margin-bottom: 1rem;
 }
 
 .nav-links li:hover {

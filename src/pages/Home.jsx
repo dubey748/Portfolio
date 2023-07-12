@@ -1,4 +1,5 @@
 import React, { useRef } from 'react';
+import { FaCode, FaFileAlt, FaComments, FaEnvelope } from 'react-icons/fa';
 
 import {
   Navbar,
@@ -11,13 +12,28 @@ import {
 import './Home.css'; 
 
 
-const Home = ({data}) => {
-
+const Home = () => {
   const sections = {
-    Projects: useRef(),
-    Resume: useRef(),
-    Testimonials: useRef(),
-    Contact: useRef(),
+    Projects: {
+      label: 'Projects',
+      icon: <FaCode />,
+      ref: useRef()
+    },
+    Resume: {
+      label: 'Resume',
+      icon: <FaFileAlt />,
+      ref: useRef()
+    },
+    Testimonials: {
+      label: 'Testimonials',
+      icon: <FaComments />,
+      ref: useRef()
+    },
+    Contact: {
+      label: 'Contact',
+      icon: <FaEnvelope />,
+      ref: useRef()
+    },
   };
   const projects = [
     {

@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import './Navbar.css'; // Import the custom Navbar styles
+import { FaCode, FaFileAlt, FaComments, FaEnvelope } from 'react-icons/fa';
 
 
 const Navbar = ({ sections }) => {
@@ -16,18 +17,29 @@ const Navbar = ({ sections }) => {
       targetSection.current.scrollIntoView({ behavior: 'smooth' });
     }
   };
+  const handleLogoClick = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' }); // Scroll to the top of the page
+    // Alternatively, I can use the following line to refresh the page:
+    // window.location.reload();
+  };
 
   return (
     <nav className="navbar">
-      <div className="logo">ABhishek Dubey</div>
+      <div className="logo" onClick={handleLogoClick}><img
+          src="https://avatars.githubusercontent.com/u/65311526?v=4"
+          alt="ABhishek Dubey"
+        /></div>
       <ul className="nav-links">
         {Object.keys(sections).map((sectionKey) => (
+         
           <li
             key={sectionKey}
+            
             className={activeSection === sectionKey ? 'active' : ''}
             onClick={() => handleItemClick(sectionKey)}
           >
-            {sectionKey}
+         
+         {sections[sectionKey].icon}
           </li>
         ))}
       </ul>
