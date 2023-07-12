@@ -16,12 +16,16 @@
   .section {
     margin-bottom: 3rem;
   }
+  .heading{
+    color: white;
+  }
   
   
   .section h2 {
     font-size: 2.5rem;
     font-weight: bold;
     margin-bottom: 1rem;
+    color: white;
   }
   
  

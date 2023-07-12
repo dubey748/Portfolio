@@ -1,4 +1,5 @@
 import React, { useRef } from 'react';
+
 import {
   Navbar,
   Footer,
@@ -63,7 +64,7 @@ const Home = ({data}) => {
 
       {/* Projects Section */}
       <section className="section projects" id="projects" ref={sections.Projects}>
-        <h2>Projects</h2>
+        <h1 className='heading'>Projects</h1>
         <div className="project-cards-container">
           {/* Render ProjectCard components with project data */}
           {projects.map((project, index) => (
@@ -77,13 +78,13 @@ const Home = ({data}) => {
 
       {/* Testimonials Section */}
       <section className="section testimonials" ref={sections.Testimonials} id="testimonials">
-      <h1>Testimonials</h1>
+      <h1 className='heading'>Testimonials</h1>
         <Testimonial/>
         
       </section>
 
       <section className="section" ref={sections.Resume} id="resume">
-      <h1>Resume</h1>
+      <h1 className='heading'>Resume</h1>
         <Resume/>
         
       </section>
@@ -92,6 +93,8 @@ const Home = ({data}) => {
 
       {/* Contact Section */}
       <section className="section contact" ref={sections.Contact} id="contact">
+     
+      <h1 className='heading'>Reach to me</h1>
        <ContactForm/>
       
       </section>

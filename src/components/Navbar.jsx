@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import './Navbar.css'; // Import the custom Navbar styles
 
+
 const Navbar = ({ sections }) => {
   const [activeSection, setActiveSection] = useState('');
 

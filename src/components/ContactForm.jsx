@@ -15,9 +15,11 @@ const ContactForm = () => {
     }, 1000);
   };
 
+  
+
   return (
     <div className="contact-form-container">
-      <h2>Contact Us</h2>
+      <h2>Contact me</h2>
       {formSubmitted ? (
         <p>Thank you! Abhishek will get back to you soon.</p>
       ) : (

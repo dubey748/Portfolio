@@ -3,6 +3,7 @@
   margin: 0 auto;
   padding: 20px;
   font-family: Arial, sans-serif;
+  color: white;
 }
 
 header {
@@ -34,7 +35,7 @@ button {
 }
 
 button:hover {
-  background-color: #ddd;
+  background-color: #61dafb;
 }
 
 button:focus {

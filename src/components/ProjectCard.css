@@ -1,7 +1,7 @@
 /* src/components/ProjectCard.css */
 
 .project-card {
-  background-color: #fff;
+  background-color:black;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   border-radius: 8px;
   overflow: hidden;

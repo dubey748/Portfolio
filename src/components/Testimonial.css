@@ -6,11 +6,12 @@
   flex-wrap: wrap;
   justify-content: center;
   gap: 1rem;
+
   margin-bottom: 3rem;
 }
 
 .testimonial-card {
-  background: linear-gradient(to bottom right, #ffcc66, #ff6699);
+  background-color: black;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   overflow: hidden;
@@ -19,6 +20,7 @@
   flex: 0 0 calc(33.3333% - 1rem);
   margin: 0.5rem;
   padding: 1.5rem;
+  
 }
 
 .testimonial-description {

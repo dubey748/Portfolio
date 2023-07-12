@@ -1,12 +1,29 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
+import axios from 'axios';
 import './Resume.css'
 
 const Resume = () => {
   const [activeSection, setActiveSection] = useState('summary');
+  const [data, setData]=useState([])
 
   const handleButtonClick = (section) => {
     setActiveSection(section);
   };
+  const fetchData = async () => {
+    try {
+      const response = await axios("https://abhishekbackend.onrender.com/resume");
+     
+      setData(response.data[0])
+
+    } catch (error) {
+      console.error("Error fetching data:", error);
+    }
+  };
+  
+  useEffect(() => {
+    fetchData();
+  }, []);
+  
 
   return (
     <div className="resume">
@@ -29,20 +46,16 @@ const Resume = () => {
 
       {activeSection === 'summary' && (
         <section className="resume-section">
-          <h2>Summary</h2>
+          
           <p>
-            Results-oriented frontend engineer with 5+ years of experience
-            building responsive and user-friendly web applications. Skilled in
-            HTML, CSS, JavaScript, and modern frontend frameworks like React.
-            Strong problem-solving abilities and a passion for creating
-            high-quality code.
+          {data.summary}
           </p>
         </section>
       )}
 
       {activeSection === 'skills' && (
         <section className="resume-section">
-          <h2>Skills</h2>
+          
           <ul>
             <li>HTML5</li>
             <li>CSS3</li>
