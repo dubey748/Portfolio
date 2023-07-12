@@ -10,7 +10,8 @@ import {
 import './Home.css'; 
 
 
-const Home = () => {
+const Home = ({data}) => {
+
   const sections = {
     Projects: useRef(),
     Resume: useRef(),
@@ -76,11 +77,13 @@ const Home = () => {
 
       {/* Testimonials Section */}
       <section className="section testimonials" ref={sections.Testimonials} id="testimonials">
+      <h1>Testimonials</h1>
         <Testimonial/>
         
       </section>
 
-      <section className="section resume" ref={sections.Resume} id="resume">
+      <section className="section" ref={sections.Resume} id="resume">
+      <h1>Resume</h1>
         <Resume/>
         
       </section>

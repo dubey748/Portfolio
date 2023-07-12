@@ -53,6 +53,7 @@
     padding: 1.5rem;
     box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
   }
+  
  
   @media screen and (max-width: 1200px) {
     .project-card {
