@@ -1,74 +1,237 @@
-
 .home-container {
   max-width: 1200px;
   margin: 0 auto;
   padding: 2rem;
-  
+}
+
+.heading {
+  color: white;
+}
+
+.cards-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.card {
+  flex: 0 0 calc(33.333% - 1rem);
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 1rem;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+  margin: 0.5rem;
+  max-width: 300px;
+  cursor: pointer;
+  transition: all 250ms ease-in-out;
+}
+
+.card:hover {
+  box-shadow: 0 4px 1rem -4px #000;
+  transform: translateY(-3px);
+}
+
+.card-image {
+  width: 100%;
+  height: auto;
+  border-radius: 6px;
+}
+
+.card-content {
+  padding: 1rem;
+}
+
+@media screen and (max-width: 768px) {
+  .card {
+    flex: 0 0 calc(50% - 1rem);
+    max-width: 100%;
+  }
 }
 
 .project-cards-container {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center; 
-  gap: 1rem; 
+  justify-content: center;
+  gap: 1rem;
 }
- 
-  .section {
-    margin-bottom: 3rem;
+
+.heading {
+  color: white;
+}
+
+.project-card {
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 1rem;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+  flex: 0 0 calc(25% - 1rem);
+  margin: 0.5rem;
+  max-width: 250px;
+}
+
+.skill-bar {
+  background-color: #f0f0f0;
+  border-radius: 4px;
+  height: 12px;
+  position: relative;
+}
+
+.skill-progress {
+  border-radius: 4px;
+  height: 100%;
+}
+
+.feedback {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.feedback-card {
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  align-items: center;
+  padding: 1rem;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+  flex: 0 0 calc(50% - 1rem);
+  margin: 0.5rem;
+  max-width: 300px;
+}
+
+.section-feedback {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.feedback-main {
+  margin: 80px 80px 80px 120px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 60vh;
+  background-color: rgb(20, 20, 38);
+}
+
+.resume-main {
+  margin: 80px 80px 80px 120px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(20, 20, 38);
+}
+
+.contact-main {
+  margin: 80px 80px 80px 120px;
+  background-color: rgb(20, 20, 38);
+}
+
+.contact-details {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 2rem;
+  margin-bottom: -5rem;
+}
+
+.map-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: -5rem;
+}
+
+.map-container iframe {
+  width: 100%;
+  max-width: 100%;
+  height: 250px;
+  border: none;
+}
+
+.project-main {
+  margin: 80px 80px 80px 120px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(20, 20, 38);
+}
+
+.resume {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+  color: white;
+}
+
+.resume-section {
+  background-color: black;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  min-height: 100px; /* Adjust the minimum height as needed */
+}
+
+.feedback-slider {
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.feedback-card p {
+  margin: 0;
+}
+
+@media screen and (max-width: 768px) {
+  .feedback-card {
+    flex: 0 0 calc(100% - 1rem);
+    max-width: 100%;
   }
-  .heading{
-    color: white;
-  }
-  
-  
-  .section h2 {
-    font-size: 2.5rem;
-    font-weight: bold;
-    margin-bottom: 1rem;
-    color: white;
-  }
-  
- 
+}
+
+@media screen and (max-width: 1200px) {
   .project-card {
-    border: 1px solid #ccc;
-    border-radius: 8px;
+    flex: 0 0 calc(33.333% - 1rem);
+    max-width: 300px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .project-card {
+    flex: 0 0 calc(50% - 1rem);
+    max-width: 100%;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .home-container {
     padding: 1rem;
-    box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
-    flex: 0 0 calc(25% - 1rem); /* Adjust card width to fit four cards in one row */
-    margin: 0.5rem; /* Add some spacing between the cards */
-    max-width: 250px; /* Decrease the max-width to make the cards smaller */
   }
-  /* SkillBar styles */
-  .skill-bar {
-    background-color: #f0f0f0;
-    border-radius: 4px;
-    height: 12px;
-    position: relative;
+
+  .cards-container,
+  .project-cards-container {
+    justify-content: flex-start;
   }
-  
-  .skill-progress {
-    border-radius: 4px;
-    height: 100%;
+
+  .card,
+  .project-card {
+    flex: 0 0 100%;
+    max-width: 100%;
   }
-  
-  .testimonial-card {
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    padding: 1.5rem;
-    box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+
+  .feedback-card,
+  .resume-section {
+    margin-left: 0;
+    margin-right: 0;
   }
-  
- 
-  @media screen and (max-width: 1200px) {
-    .project-card {
-      flex: 0 0 calc(33.3333% - 1rem); /* Adjust card width to fit three cards in one row on smaller screens */
-      max-width: 300px; /* Increase max-width to make the cards slightly larger on smaller screens */
-    }
+
+  .feedback-main,
+  .resume-main,
+  .contact-main,
+  .project-main {
+    margin: 50px 20px;
   }
-  
-  @media screen and (max-width: 768px) {
-    .project-card {
-      flex: 0 0 calc(50% - 1rem); /* Adjust card width to fit two cards in one row on even smaller screens */
-      max-width: 100%; /* Make the cards occupy the full container width on smaller screens */
-    }
-  }
+}

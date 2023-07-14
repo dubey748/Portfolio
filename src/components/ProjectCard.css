@@ -1,15 +1,9 @@
-/* src/components/ProjectCard.css */
-
 .project-card {
-  background-color:black;
+  background-color: black;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   border-radius: 8px;
   overflow: hidden;
   transition: transform 0.3s ease;
-  /* Remove the max-width and flex properties */
-  /* max-width: 300px; */
-  /* flex: 0 0 calc(33.3333% - 1rem); */
-  /* Add some spacing between the cards */
   margin: 0.5rem;
   width: calc(33.3333% - 1rem); /* Adjust card width to fit three cards in one row */
 }
@@ -53,7 +47,18 @@
   background-color: #0056b3;
 }
 
+/* Responsiveness */
+@media screen and (max-width: 1200px) {
+  .project-card {
+    width: calc(50% - 1rem); /* Adjust card width to fit two cards in one row */
+  }
+}
+
 @media screen and (max-width: 768px) {
+  .project-card {
+    width: calc(100% - 1rem); /* Adjust card width to fit one card in one row */
+  }
+
   .project-thumbnail {
     height: 150px;
   }

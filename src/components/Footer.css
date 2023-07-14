@@ -1,7 +1,5 @@
-/* src/components/Footer.css */
-
 .footer {
-  background-color:black;
+  background-color: black;
   color: #fff;
   padding: 2rem;
 }
@@ -10,12 +8,15 @@
   max-width: 1200px;
   margin: 0 auto;
   display: flex;
+  flex-wrap: wrap; /* Allow content to wrap on smaller screens */
   justify-content: space-between;
   align-items: center; /* Center the content vertically */
 }
 
 .footer-info {
-  flex: 1 0 300px;
+  flex: 1 0 100%; /* Allow info section to take full width on smaller screens */
+  text-align: center;
+  margin-bottom: 1rem;
 }
 
 .footer-info h3 {
@@ -24,7 +25,7 @@
 }
 
 .footer-links {
-  flex: 1; /* Allow the links to take up the remaining space */
+  flex: 1 0 100%; /* Allow links section to take full width on smaller screens */
   display: flex;
   justify-content: center; /* Center the links horizontally */
 }
@@ -40,35 +41,23 @@
   padding: 0.5rem 1rem; /* Set padding */
   border-radius: 4px; /* Add rounded corners */
   transition: background-color 0.3s ease; /* Add a smooth background color transition */
+  margin-bottom: 0.5rem;
+}
+
+.footer-links button:last-child {
+  margin-right: 0;
 }
 
 .footer-links button:hover {
-  background-color: #61dafb/* Change the background color on hover */
+  background-color: #61dafb; /* Change the background color on hover */
 }
 
 .footer-contact {
-  flex: 1 0 300px;
+  flex: 1 0 100%; /* Allow contact section to take full width on smaller screens */
+  text-align: center;
+  margin-bottom: 1rem;
 }
 
-@media screen and (max-width: 1200px) {
-  .footer-content {
-    flex-wrap: wrap;
-  }
-
-  .footer-info,
-  .footer-links,
-  .footer-contact {
-    flex: 1 0 100%;
-    text-align: center;
-    margin-bottom: 1rem;
-  }
-
-  .footer-links button {
-    margin-right: 0;
-    margin-bottom: 0.5rem;
-    display: block;
-  }
-}
 .footer-up-icon {
   flex: 0 0 40px; /* Set a fixed width for the up icon container */
   display: flex;
@@ -91,12 +80,14 @@
 }
 
 @media screen and (max-width: 768px) {
-  .footer {
-    text-align: center;
+  .footer-content {
+    flex-direction: column; /* Stack the sections vertically on smaller screens */
   }
-}
-@media screen and (max-width: 1200px) {
-  /* ... (previous responsive rules) ... */
+
+  .footer-links button {
+    margin-right: 0;
+    display: block;
+  }
 
   .footer-up-icon {
     flex: 1 0 40px;

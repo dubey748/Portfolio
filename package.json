@@ -12,17 +12,25 @@
   "dependencies": {
     "@emotion/react": "^11.11.1",
     "@emotion/styled": "^11.11.0",
+    "@formspree/react": "^2.4.4",
     "@fortawesome/free-solid-svg-icons": "^6.4.0",
     "@fortawesome/react-fontawesome": "^0.2.0",
+    "@mdbootstrap/react-testimonial-slider": "^1.0.0",
     "@mui/icons-material": "^5.14.0",
     "@mui/material": "^5.14.0",
     "@mui/styled-engine": "^5.13.2",
     "axios": "^1.4.0",
+    "mdb-react-ui-kit": "^6.1.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-icons": "^4.10.1",
+    "react-responsive-carousel": "^3.2.23",
     "react-scroll": "^1.8.9",
-    "react-spring": "^9.7.2"
+    "react-slick": "^0.29.0",
+    "react-spring": "^9.7.2",
+    "slick-carousel": "^1.8.1",
+    "swiper": "^10.0.4",
+    "swiper-bundle": "^0.0.1-security"
   },
   "devDependencies": {
     "@types/react": "^18.0.37",

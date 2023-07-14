@@ -1,0 +1,153 @@
+.feedback-slider-container {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    overflow: hidden;
+  }
+  
+  .feedback-slider {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+ 
+  .feedback-slider .slick-prev,
+  .feedback-slider .slick-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1;
+    width: 40px;
+    height: 40px;
+  
+    border-radius: 50%;
+ 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition:  0.3s ease;
+  }
+  .card-content{
+    margin-bottom: -75px;
+  }
+  .feedback-slider .slick-prev {
+    left: -20px;
+    left: -60px;
+  }
+  
+  .feedback-slider .slick-next {
+    right: -20px;
+  }
+  
+  .feedback-slider .slick-prev:hover,
+  .feedback-slider .slick-next:hover {
+    background-color: #f0f0f0;
+  }
+  
+  .feedback-slider .slick-prev:before,
+  .feedback-slider .slick-next:before {
+    content: "";
+    font-family: "slick";
+    font-size: 20px;
+    line-height: 1;
+   
+    opacity: 0.75;
+    transition: opacity 0.3s ease;
+  }
+  
+  .feedback-slider .slick-prev:before {
+    content: "\2190";
+    display: block;
+  }
+  
+  .feedback-slider .slick-next:before {
+    content: "\2192";
+    display: block;
+  }
+  .client-title{
+    font-style: italic;
+
+  }
+  .client-designation{
+font-weight: 100;
+  }
+  .description{
+    font-weight: 100;
+  }
+  .social-icons a {
+    margin-right: 20px; /* Add space between the icons */
+   
+    font-size: 20px;
+    transition: color 0.3s ease;
+  }
+  .feedback-card {
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+    max-width: 400px;
+    margin: 0 auto;
+    overflow: hidden;
+    height: 230px; /* Set a fixed height for the cards */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transform: scale(1);
+    will-change: transform;
+   
+    margin-left: 60px;
+  }
+  .feedback-card .client-designation {
+    margin-top: 10px; /* Add margin-top to create space between social-icons and designation */
+  }
+  
+  .feedback-card.expanded {
+    height: auto;
+    transform: scale(1.05); /* Increase the scale when expanded */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Add a slight shadow effect */
+    transition-delay: 0.1s;
+  }
+  
+  .feedback-card img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin: 0 auto 20px;
+  }
+  .feedback-card h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: black;
+  }
+  
+  .feedback-card p {
+    font-size: 16px;
+    line-height: 1.5;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    color: black;
+  }
+  .feedback-card:hover {
+    transform: scale(1.05); /* Increase the scale on hover */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Add a slight shadow effect */
+   
+   
+  }
+  
+  .feedback-card.expanded:hover {
+    transform: scale(1.05); /* Maintain the scale on hover when expanded */
+    transition-delay: 0s; /* Remove the delay for an instant expansion on hover */
+    transform: scale(1.05); /* Maintain the scale on hover when expanded */
+  }
+  
+  .feedback-card.expanded p {
+    white-space: normal;
+    overflow: visible;
+    text-overflow: unset;
+  }
+  

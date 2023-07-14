@@ -80,3 +80,34 @@
 .nav-links li:hover .section-name {
   opacity: 1;
 }
+
+/* Responsiveness */
+@media screen and (max-width: 768px) {
+  .navbar {
+    width: 100%;
+    padding: 1rem;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+    position: static;
+    height: auto;
+  }
+
+  .logo {
+    margin-bottom: 0;
+  }
+
+  .nav-links {
+    flex-direction: row;
+    margin: 0;
+  }
+
+  .nav-links li {
+    margin-right: 1rem;
+    margin-bottom: 0;
+  }
+
+  .section-name {
+    display: none;
+  }
+}

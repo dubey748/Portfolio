@@ -40,7 +40,8 @@ button:hover {
 
 button:focus {
   outline: none;
-  background-color: #ccc;
+  background-color: black;
+  color: white;
 }
 
 section {
@@ -106,4 +107,55 @@ ul li {
 
 .resume-section:not(:last-child) {
   margin-bottom: 20px;
+}
+
+.resume-section .chain-link {
+  position: relative;
+}
+
+.resume-section .chain-link::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #ff6600;
+}
+
+.resume-section:not(:last-child) .chain-link::before {
+  height: calc(100% + 10px);
+}
+
+/* Responsiveness */
+@media screen and (max-width: 768px) {
+  .resume {
+    padding: 10px;
+  }
+
+  h1 {
+    font-size: 20px;
+  }
+
+  p {
+    font-size: 16px;
+  }
+
+  h2 {
+    font-size: 18px;
+  }
+
+  ul {
+    padding-left: 15px;
+  }
+
+  .resume-section h2 {
+    font-size: 16px;
+  }
+
+  .resume-section p {
+    font-size: 14px;
+  }
 }

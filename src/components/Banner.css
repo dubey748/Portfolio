@@ -1,8 +1,9 @@
 .portfolio-container {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
-  margin-left: 70px;
+  margin-left: 20px;
 }
 
 .details-container {
@@ -14,9 +15,11 @@
   margin-bottom: 10px;
   padding-bottom: 20px;
 }
-.designation h2{
+
+.designation h2 {
   color: white;
-  font-weight: bold
+  font-weight: bold;
+  font-family: 'Courier New', Courier, monospace;
 }
 
 .banner-container {
@@ -47,32 +50,24 @@
   animation: pulsate 2s infinite;
 }
 
-/* @keyframes scale-in {
-  0% {
-    transform: scale(0);
-    opacity: 0;
-  }
-  100% {
-    transform: scale(1);
-    opacity: 1;
-  }
-}
-
-.designation h2 {
-  color: white;
-  font-weight: bold;
-  animation: scale-in 5s infinite;
-} */
-
 .description.animated span {
   opacity: 0;
   color: white;
   padding-top: 20px;
- 
+  font-family: cursive;
   animation-name: fadeIn;
   animation-duration: 0.7s;
   animation-fill-mode: forwards;
   animation-timing-function: ease-in-out;
+}
+
+.social-icons {
+  margin-top: 50px;
+}
+
+.social-icons a:hover svg {
+  transform: scale(1.2); /* Increase the size of the icon on hover */
+  transition: transform 0.3s ease; /* Add a smooth transition effect */
 }
 
 @keyframes fadeIn {
@@ -84,10 +79,28 @@
   }
 }
 
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .portfolio-container {
+    flex-direction: column;
+    align-items: flex-start;
+    margin-left: 0;
+  }
 
+  .details-container {
+    padding-right: 0;
+    padding-bottom: 20px;
+  }
 
+  .designation h2 {
+    font-size: 24px;
+  }
 
+  .banner-container {
+    text-align: center;
+  }
 
-
-
-
+  .social-icons {
+    margin-top: 20px;
+  }
+}

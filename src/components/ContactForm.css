@@ -2,62 +2,66 @@
 
 /* Styles for the entire ContactForm component container */
 .contact-form-container {
-    max-width: 600px;
-    margin: 0 auto;
-    padding: 2rem;
-    color: white;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.success-message {
+  margin-top: 100px;
+  font-style: italic;
+}
+
+/* Form styles */
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  color: white;
+}
+
+/* Form field styles */
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+label {
+  font-weight: bold;
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+textarea {
+  resize: vertical;
+}
+
+button {
+  padding: 0.75rem 1.5rem;
+  background-color: #646cff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* Responsiveness */
+@media (max-width: 600px) {
+  .contact-form-container {
+    padding: 1rem;
+    max-width: 100%;
   }
-  
-  /* Form styles */
-  .contact-form {
-    display: flex;
-    flex-direction: column;
-    
-  }
-  
-  /* Form field styles */
-  .form-group {
-    margin-bottom: 1.5rem;
-  }
-  
-  label {
-    font-weight: bold;
-  }
-  
+
   input,
   textarea {
-    width: 100%;
-    padding: 0.5rem;
-    border: 1px solid #ccc;
-    border-radius: 4px;
+    padding: 0.25rem;
   }
-  
-  textarea {
-    resize: vertical;
-  }
-  
+
   button {
-    padding: 0.75rem 1.5rem;
-    background-color: #646cff;
-    color: #fff;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
+    padding: 0.5rem 1rem;
   }
-  
-  /* Responsiveness */
-  @media (max-width: 600px) {
-    .contact-form-container {
-      padding: 1rem;
-    }
-  
-    input,
-    textarea {
-      padding: 0.25rem;
-    }
-  
-    button {
-      padding: 0.5rem 1rem;
-    }
-  }
-  
+}
