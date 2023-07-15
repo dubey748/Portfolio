@@ -1,20 +1,21 @@
-import React, { useState, useCallback, useMemo } from "react";
+import React, { useState, useCallback, useMemo, useEffect} from "react";
 import Slider from "react-slick";
+import axios from 'axios';
 import './Feedback.css'
 import { FaLinkedin, FaInstagram } from 'react-icons/fa';
 
 const FeedbackCard = React.memo(({ client, expandedCard, handleCardHover, handleCardLeave, truncateDescription }) => {
   return (
     <div
-      className={`feedback-card ${expandedCard === client.id ? 'expanded' : ''}`}
-      onMouseEnter={() => handleCardHover(client.id)}
+      className={`feedback-card ${expandedCard === client._id ? 'expanded' : ''}`}
+      onMouseEnter={() => handleCardHover(client._id)}
       onMouseLeave={handleCardLeave}
     >
-      <div className="card-content"> {/* Wrap the elements in a div */}
+      <div className="card-content">
         <img src={client.image} alt={client.title} />
         <h3 className="client-title">{client.title}</h3>
         <h4 className="client-designation">
-          {client.designation}, at <strong> {client.company}</strong>
+          {client.designation}, at <strong>{client.company}</strong>
         </h4>
       </div>
       <div className="social-icons">
@@ -26,14 +27,17 @@ const FeedbackCard = React.memo(({ client, expandedCard, handleCardHover, handle
         </a>
       </div>
       <p className="description">
-        {expandedCard === client.id ? client.description : truncateDescription(client.description)}
+        {expandedCard === client._id ? client.description : truncateDescription(client.description)}
       </p>
     </div>
   );
+  
 });
 
-const Feedback = React.memo(({ ClientsInfo }) => {
+const Feedback = React.memo(() => {
+  const [clientsInfo, setClientsInfo] = useState([]);
   const [expandedCard, setExpandedCard] = useState(null);
+  const [loading, setLoading] = useState(true);
 
   const handleCardHover = useCallback((index) => {
     setExpandedCard(index);
@@ -63,19 +67,37 @@ const Feedback = React.memo(({ ClientsInfo }) => {
     return description;
   }, []);
 
+  const fetchData = async () => {
+    try {
+      const response = await axios.get("https://abhishekbackend.onrender.com/showfeed");
+      setClientsInfo(response.data);
+      setLoading(false);
+    } catch (error) {
+      console.error("Error fetching data:", error);
+    }
+  };
+  
+  useEffect(() => {
+    fetchData();
+  }, []);
+
+  if (loading) {
+    return <div>Loading...</div>;
+  }
+
   return (
     <Slider {...settings} className="feedback-slider">
-      {ClientsInfo.map((client) => (
-        <FeedbackCard
-          key={client.id}
-          client={client}
-          expandedCard={expandedCard}
-          handleCardHover={handleCardHover}
-          handleCardLeave={handleCardLeave}
-          truncateDescription={truncateDescription}
-        />
-      ))}
-    </Slider>
+    {clientsInfo.map((client) => (
+      <FeedbackCard
+        key={client._id}
+        client={client}
+        expandedCard={expandedCard}
+        handleCardHover={handleCardHover}
+        handleCardLeave={handleCardLeave}
+        truncateDescription={truncateDescription}
+      />
+    ))}
+  </Slider>
   );
 });
 
