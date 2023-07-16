@@ -1,11 +1,10 @@
-import Navbar from './Navbar';
-import Footer from './Footer';
-import ProjectCard from './ProjectCard';
-import ContactForm from './ContactForm';
-import Resume from './Resume';
-import Banner from './Banner';
-import { ClientsInfo } from './ClientsInfo';
-import Feedback from './Feedback';
+import Navbar from './navbar/Navbar';
+import Footer from './footer/Footer';
+import ProjectCard from './projectCard/ProjectCard';
+import ContactForm from './contact/ContactForm';
+import Resume from './resume/Resume';
+import Banner from './banner/Banner';
+import Feedback from './feedback/Feedback';
 
 export {
   Navbar,
@@ -14,6 +13,5 @@ export {
   ContactForm,
   Resume,
   Banner,
-  ClientsInfo,
   Feedback
 };

@@ -1,5 +1,5 @@
 import React, { useEffect, useState, useMemo } from "react";
-import abhishek from "../assets/images/abhishek.jpg";
+import abhishek from "../../assets/images/abhishek.jpg";
 import "./Banner.css"; 
 import { FaLinkedin,  FaInstagram, FaTwitter, FaFacebook } from 'react-icons/fa';
 import { AiFillGithub } from 'react-icons/ai';

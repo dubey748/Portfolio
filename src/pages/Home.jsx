@@ -9,7 +9,6 @@ import {
   Feedback,
   Resume,
   Banner,
-  ClientsInfo,
 } from "../components";
 import "./Home.css";
 
@@ -37,44 +36,6 @@ const Home = () => {
       ref: useRef(),
     },
   };
-  const projects = [
-    {
-      title: "Project 1",
-      description: "Description for Project 1",
-      thumbnailUrl: "https://via.placeholder.com/300",
-      projectLink: "https://example.com/project1",
-    },
-    {
-      title: "Project 2",
-      description: "Description for Project 2",
-      thumbnailUrl: "https://via.placeholder.com/300",
-      projectLink: "https://example.com/project2",
-    },
-    {
-      title: "Project 2",
-      description: "Description for Project 3",
-      thumbnailUrl: "https://via.placeholder.com/300",
-      projectLink: "https://example.com/project3",
-    },
-    {
-      title: "Project 2",
-      description: "Description for Project 3",
-      thumbnailUrl: "https://via.placeholder.com/300",
-      projectLink: "https://example.com/project3",
-    },
-    {
-      title: "Project 2",
-      description: "Description for Project 3",
-      thumbnailUrl: "https://via.placeholder.com/300",
-      projectLink: "https://example.com/project3",
-    },
-    {
-      title: "Project 2",
-      description: "Description for Project 3",
-      thumbnailUrl: "https://via.placeholder.com/300",
-      projectLink: "https://example.com/project3",
-    },
-  ];
   return (
     <div className="home-container">
       <Banner />
@@ -88,10 +49,7 @@ const Home = () => {
           ref={sections.Projects}
         >
           <div className="project-cards-container">
-            {/* Render ProjectCard components with project data */}
-            {projects.map((project, index) => (
-              <ProjectCard key={index} project={project} />
-            ))}
+            <ProjectCard />
           </div>
         </section>
       </div>
@@ -103,7 +61,7 @@ const Home = () => {
           ref={sections.Testimonials}
         >
           <div className="feedback-cards-container">
-            <Feedback ClientsInfo={ClientsInfo} />
+            <Feedback />
           </div>
         </section>
       </div>
@@ -115,23 +73,24 @@ const Home = () => {
 
       {/* Contact Section */}
       <div className="contact-main">
-  <section className="section contact" ref={sections.Contact} id="contact">
-    <div className="map-container">
-      <iframe
-        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3551.146834120089!2d83.36835007507995!3d27.120184751144425!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3996b35bc5f701d9%3A0xc04411bfe3c672aa!2sABhishek%20Dubey!5e0!3m2!1sen!2sin!4v1689367723091!5m2!1sen!2sin"
-     
-        
-        style={{ border: 0 }}
-        allowFullScreen=""
-        loading="lazy"
-      ></iframe>
-    </div>
-    <div className="contact-details">
-      <ContactForm />
-    </div>
-  </section>
-</div>
-
+        <section
+          className="section contact"
+          ref={sections.Contact}
+          id="contact"
+        >
+          <div className="map-container">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3551.146834120089!2d83.36835007507995!3d27.120184751144425!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3996b35bc5f701d9%3A0xc04411bfe3c672aa!2sABhishek%20Dubey!5e0!3m2!1sen!2sin!4v1689367723091!5m2!1sen!2sin"
+              style={{ border: 0 }}
+              allowFullScreen=""
+              loading="lazy"
+            ></iframe>
+          </div>
+          <div className="contact-details">
+            <ContactForm />
+          </div>
+        </section>
+      </div>
 
       <Footer />
     </div>

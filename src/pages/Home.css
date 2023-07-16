@@ -2,6 +2,7 @@
   max-width: 1200px;
   margin: 0 auto;
   padding: 2rem;
+  
 }
 
 .heading {
@@ -68,6 +69,7 @@
   flex: 0 0 calc(25% - 1rem);
   margin: 0.5rem;
   max-width: 250px;
+  color: white;
 }
 
 .skill-bar {
@@ -106,14 +108,13 @@
 }
 
 .feedback-main {
-  margin: 80px 80px 80px 120px;
+ margin: 80px 80px 80px 120px;
   display: flex;
   justify-content: center;
   align-items: center;
   height: 60vh;
-  background-color: rgb(20, 20, 38);
+  background-color: rgb(20, 20, 38)
 }
-
 .resume-main {
   margin: 80px 80px 80px 120px;
   display: flex;
@@ -122,11 +123,10 @@
   background-color: rgb(20, 20, 38);
 }
 
-.contact-main {
+.contact-main{
   margin: 80px 80px 80px 120px;
   background-color: rgb(20, 20, 38);
 }
-
 .contact-details {
   display: flex;
   justify-content: center;
@@ -134,31 +134,32 @@
   flex-direction: column;
   padding: 2rem;
   margin-bottom: -5rem;
+ 
 }
 
-.map-container {
-  width: 100%;
+  .map-container {
+    width: 100%;
+    
   display: flex;
   justify-content: center;
   align-items: center;
   margin-bottom: -5rem;
-}
+  } /* Set the height to 100% */
+  .map-container iframe {
+    width: 100%;
+    max-width: 100%;
+   
+    height: 250px;
+    border: none;
+   
+  }
 
-.map-container iframe {
-  width: 100%;
-  max-width: 100%;
-  height: 250px;
-  border: none;
-}
-
-.project-main {
+.project-main{
   margin: 80px 80px 80px 120px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+ 
+
   background-color: rgb(20, 20, 38);
 }
-
 .resume {
   max-width: 600px;
   margin: 0 auto;
@@ -166,7 +167,6 @@
   font-family: Arial, sans-serif;
   color: white;
 }
-
 .resume-section {
   background-color: black;
   padding: 20px;
@@ -174,6 +174,7 @@
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   min-height: 100px; /* Adjust the minimum height as needed */
 }
+
 
 .feedback-slider {
   width: 100%;
@@ -194,7 +195,7 @@
 
 @media screen and (max-width: 1200px) {
   .project-card {
-    flex: 0 0 calc(33.333% - 1rem);
+    flex: 0 0 calc(33.3333% - 1rem);
     max-width: 300px;
   }
 }
@@ -203,35 +204,5 @@
   .project-card {
     flex: 0 0 calc(50% - 1rem);
     max-width: 100%;
-  }
-}
-
-@media screen and (max-width: 480px) {
-  .home-container {
-    padding: 1rem;
-  }
-
-  .cards-container,
-  .project-cards-container {
-    justify-content: flex-start;
-  }
-
-  .card,
-  .project-card {
-    flex: 0 0 100%;
-    max-width: 100%;
-  }
-
-  .feedback-card,
-  .resume-section {
-    margin-left: 0;
-    margin-right: 0;
-  }
-
-  .feedback-main,
-  .resume-main,
-  .contact-main,
-  .project-main {
-    margin: 50px 20px;
   }
 }
