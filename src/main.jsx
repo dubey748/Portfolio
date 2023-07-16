@@ -7,6 +7,7 @@ import 'slick-carousel/slick/slick-theme.css';
 
 
 
+
 import { FaBeer } from 'react-icons/fa';
 
 ReactDOM.createRoot(document.getElementById('root')).render(

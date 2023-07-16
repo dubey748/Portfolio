@@ -1,37 +1,91 @@
-.project{
- 
+.project-slide {
+  background-color: white;
   width: 100%;
+  height: 100%;
   display: flex;
-  justify-content: center;
-  
-}
-
-.project-card {
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  border-radius: 8px;
-  width: 100%;
   overflow: hidden;
-  transition: transform 0.3s ease;
-  margin: 0.5rem;
-  text-align: center;
-  flex: 0 0 auto;
-  background-size: cover;
-  background-position: center;
-  cursor: pointer; /* Add cursor property */
+  cursor: pointer;
 }
 
-.project-card h1 {
+.project-slide .project-image {
+  width: 50%;
+  height: 400px;
+  object-fit: cover;
+  border-radius: 0px 0 0 0px;
+}
+
+.project-slide .project-details {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 20px;
+  background-color: #f8f8f8;
+  border-radius: 0 8px 8px 0;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  height: 400px;
+}
+
+.project-slide .project-title {
+  font-size: 42px;
+  margin-bottom: 10px;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.project-slide .project-description {
+  margin-bottom: 10px;
+  color: #555;
+  font-style: italic;
+}
+
+.carousel {
+  position: relative;
+}
+
+.carousel .control-arrow {
+  background-color: rgba(0, 0, 0, 0.3);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
   font-size: 24px;
-  color: black;
-  padding: 1rem;
-  font-weight: 600;
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
 }
 
-.project-card p {
-  font-size: 18px;
-  color: black;
-  padding: 1rem;
-  font-style: oblique;
-  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+.carousel .control-arrow:hover {
+  background-color: rgba(0, 0, 0, 0.5);
 }
 
+.carousel .control-prev {
+  left: 20px;
+}
+
+.carousel .control-next {
+  right: 20px;
+}
+
+/* Media Query for Small Screens */
+@media (max-width: 768px) {
+  .project-slide {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .project-slide .project-image {
+    width: 100%;
+    height: auto;
+    border-radius: 0;
+  }
+
+  .project-slide .project-details {
+    width: 100%;
+    border-radius: 0;
+    height: auto;
+  }
+}

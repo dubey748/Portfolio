@@ -1,47 +1,50 @@
-import React, { useEffect, useState } from "react";
-import axios from "axios";
-import "./ProjectCard.css";
+import React, { useState, useEffect } from 'react';
+import axios from 'axios';
+import { Carousel } from 'react-responsive-carousel';
+import 'react-responsive-carousel/lib/styles/carousel.min.css';
+import './ProjectCard.css';
 
-const ProjectCard = () => {
-  const [data, setData] = useState([]);
+const ProjectPortfolio = () => {
+  const [projects, setProjects] = useState([]);
   const [loading, setLoading] = useState(true);
 
-  const fetchData = async () => {
-    const res = await axios.get(
-      "https://abhishekbackend.onrender.com/projects"
-    );
-    setData(res.data);
-    setLoading(false);
-    console.log(res.data);
-  };
-
   useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const response = await axios.get('https://abhishekbackend.onrender.com/projects');
+        setProjects(response.data);
+        setLoading(false);
+      } catch (error) {
+        console.error('Error fetching data:', error);
+      }
+    };
+
     fetchData();
   }, []);
-
-  const handleClick = (link) => {
-    window.location.href = link;
-  };
 
   if (loading) {
     return <div>Loading...</div>;
   }
 
+  const handleProjectClick = (projectLink) => {
+    window.open(projectLink, '_blank');
+  };
+
   return (
-    <div className="project">
-      {data.map((project) => (
-        <div
-          className="project-card"
-          key={project._id}
-          style={{ backgroundImage: `url(${project.thumbnailUrl})` }}
-          onClick={() => handleClick(project.projectLink)}
-        >
-          <h1>{project.title}</h1>
-          <p>{project.description}</p>
-        </div>
-      ))}
+    <div className="project-portfolio">
+      <Carousel showArrows={true} showThumbs={false} autoPlay={true} interval={2000} infiniteLoop={true} >
+        {projects.map((project) => (
+          <div className="project-slide" key={project.id} onClick={() => handleProjectClick(project.projectLink)}>
+            <img className="project-image" src={project.thumbnailUrl} alt={project.title} />
+            <div className="project-details">
+              <h3 className="project-title">{project.title}</h3>
+              <p className="project-description">{project.description}</p>
+            </div>
+          </div>
+        ))}
+      </Carousel>
     </div>
   );
 };
 
-export default ProjectCard;
+export default ProjectPortfolio;
